@@ -1,3 +1,11 @@
-.App {
+.App > h1 {
   text-align: center;
+}
+
+.ml-2 {
+  margin-left: 1.5em;
+}
+
+button {
+  margin-right: 1em;
 }
