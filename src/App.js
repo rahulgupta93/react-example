@@ -6,6 +6,8 @@ import State from './State/State';
 import Event from './Event/Event';
 import HandlerInParent from './HandlerInParent/HandlerInParent';
 import TwoWayBinding from './TwoWayBinding/TwoWayBinding';
+import StyledComponent from './StyledComponent/StyledComponent';
+import InlineStyledComponent from './InlineStyledComponent/InlineStyledComponent';
 import './App.css';
 
 class App extends Component {
@@ -66,6 +68,15 @@ class App extends Component {
         <h3> <b> 7.  <u> Two way data binding </u> </b> </h3>
         <p> Text Value in Parent: {this.state.textValue} </p>
         <label>Input inside child: </label><TwoWayBinding value={this.state.textValue} onTextChange={this.updateText} />
+
+        <h3> <b> 8.  <u> Styled Components </u> </b> </h3>
+        <div className="ml-2">
+          <h4> <b> a) Using Component CSS file </b> </h4>
+          <StyledComponent />
+          <h4> <b> b) Using Inline 'style' property in JSX </b> </h4>
+          <InlineStyledComponent />
+        </div>
+
       </div>
     );
   }
