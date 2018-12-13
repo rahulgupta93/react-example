@@ -16,7 +16,7 @@ const inlineStyledComponent = () => {
     color: 'white',
     padding: '0.5em' 
   }
-  return <p style={style}> This paragraph is styled using CSS file </p>; 
+  return <p style={style}> This paragraph is styled using inline styles </p>; 
 }
 
 export default inlineStyledComponent;

@@ -1,0 +1,52 @@
+.ComponentCard {
+  border-bottom: 1px solid #ccc;
+  padding: 0.5em;
+}
+
+.ComponentCard code {
+  white-space: pre;
+}
+
+.ComponentCard section {
+  width: 48%;
+  border: 1px solid #ccc;
+  margin: 0.5em;
+}
+
+.ComponentCard section > label {
+  font-size: small;
+  font-weight: bold;
+  background-color: #607D8B;
+  color: white;
+  display: block;
+  padding: 0.5em 0.7em;
+}
+
+.ComponentCard section.code-section > label {
+  background-color: #009688;
+}
+
+.ComponentCard section > div {
+  padding: 1em 0.5em;
+  margin: 0;
+  overflow: auto;
+  max-height: 150px;
+  height: calc(100% - 3.9em);
+}
+
+.code-section > div {
+  background-color: black;
+  color: white;
+}
+
+.output-section > div {
+  background-color: white;
+  color: black;
+}
+
+.ComponentCard .component-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  margin-bottom: 1em;
+}

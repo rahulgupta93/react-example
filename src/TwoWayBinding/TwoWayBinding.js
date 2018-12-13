@@ -6,10 +6,28 @@
  * and performs any required business logic.
  **/
 
-import React from 'react';
+import React, {Component} from 'react';
+import Input from '../Input/Input';
 
-const twoWayBinding = (props) => {
-  return <input type="text" value={props.value} onChange={props.onTextChange} />; 
+class TwoWayBinding extends Component {
+
+  state = {
+    textValue: 'Random Initial Text'
+  }
+
+  updateText = (event) => {
+    this.setState({textValue: event.target.value});
+  }
+
+  render() {
+    return (
+      <div>
+        <p> Text Value in Parent: {this.state.textValue} </p>
+        <label>Input inside child: </label>
+        <Input value={this.state.textValue} onChange={this.updateText} />
+      </div>
+    ); 
+  }
 }
 
-export default twoWayBinding;
+export default TwoWayBinding;
